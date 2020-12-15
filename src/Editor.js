@@ -2,6 +2,7 @@
 import { default as React, useEffect, useRef } from 'react';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
+import Timeline from './tools/timeline/tool';
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -51,6 +52,7 @@ const Editor = (props) => {
       autofocus: true,
       tools: { 
         header: Header, 
+        timeline: Timeline,
       }, 
     });
   };
