@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
 
 const EventTimeline = (props) => {
   const classes = useStyles();
-  const [timelineData, setTimelineData] = React.useState(DEFAULT_INITIAL_DATA);
+  const [timelineData, setTimelineData] = React.useState(props.data.events.length > 0 ? props.data : DEFAULT_INITIAL_DATA);
 
   const updateTimelineData = (newData) => {
     setTimelineData(newData);
